@@ -43,6 +43,6 @@ reviews/            Cross-checks, conflicts, and analyst decisions
 
 ## Current state
 
-`primary_sources_captured_rendered`: FY2027 Q1 is fixed and four SEC documents have browser-rendered DOM snapshots with checksums. These are not byte-identical raw HTTP responses. No financial records have been extracted yet.
+`first_facts_cross_checked`: FY2027 Q1 is fixed, four SEC documents have checksummed rendered snapshots, and seven GAAP metrics have been extracted from both the 10-Q and earnings release. The exact-value cross-check passed, but source independence remains low because both documents originate from NVIDIA.
 
 `records/seed.example.json` is synthetic and exists only to verify schema relationships.

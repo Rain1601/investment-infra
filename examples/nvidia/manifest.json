@@ -1,7 +1,7 @@
 {
   "example_id": "nvidia",
   "dataset_version": "0.1.0",
-  "status": "primary_sources_captured_rendered",
+  "status": "first_facts_cross_checked",
   "entity": {
     "entity_id": "company:nvidia",
     "legal_name": "NVIDIA Corporation",
@@ -32,6 +32,9 @@
     "discovered_documents": 7,
     "captured_original_documents": 0,
     "captured_rendered_snapshots": 4,
+    "extracted_fact_records": 14,
+    "cross_checked_metrics": 7,
+    "material_conflicts": 0,
     "known_gaps": [
       "The four stored SEC snapshots are browser-normalized DOM, not byte-identical HTTP response bodies.",
       "Three discovered NVIDIA IR artifacts have not been captured.",

@@ -7,7 +7,7 @@ Planned dataset files:
 ```text
 sources.json           Present: verified source identities
 documents.json         Present: four SEC rendered-snapshot records
-facts.json
+facts.json             Present: 14 source-specific GAAP fact records
 claims.json
 estimates.json
 evidence.json

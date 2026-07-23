@@ -1,0 +1,457 @@
+[
+  {
+    "id": "fact:10q:revenue:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-10q-fy2027-q1"],
+      "transformation": "ixbrl fact extraction",
+      "parser_version": "xmllint-html-xpath-v1"
+    },
+    "document_id": "document:sec-10q-fy2027-q1",
+    "locator": {
+      "table": "Condensed Consolidated Statements of Income",
+      "row": "Revenue",
+      "xbrl_fact_id": "f-30"
+    },
+    "metric_id": "company.revenue",
+    "original_label": "Revenue",
+    "value": 81615,
+    "original_value": "81,615",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:release:revenue:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-1-fy2027-q1-release"],
+      "transformation": "html table extraction",
+      "parser_version": "stdlib-html-table-v1"
+    },
+    "document_id": "document:sec-ex99-1-fy2027-q1-release",
+    "locator": {
+      "table": "Q1 Fiscal 2027 Summary — GAAP",
+      "row": "Revenue"
+    },
+    "metric_id": "company.revenue",
+    "original_label": "Revenue",
+    "value": 81615,
+    "original_value": "$81,615",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:10q:cost-of-revenue:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-10q-fy2027-q1"],
+      "transformation": "ixbrl fact extraction",
+      "parser_version": "xmllint-html-xpath-v1"
+    },
+    "document_id": "document:sec-10q-fy2027-q1",
+    "locator": {
+      "table": "Condensed Consolidated Statements of Income",
+      "row": "Cost of revenue",
+      "xbrl_fact_id": "f-32"
+    },
+    "metric_id": "company.cost_of_revenue",
+    "original_label": "Cost of revenue",
+    "value": 20458,
+    "original_value": "20,458",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:release:cost-of-revenue:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-1-fy2027-q1-release"],
+      "transformation": "html table extraction",
+      "parser_version": "stdlib-html-table-v1"
+    },
+    "document_id": "document:sec-ex99-1-fy2027-q1-release",
+    "locator": {
+      "table": "NVIDIA Corporation Condensed Consolidated Statements of Income",
+      "row": "Cost of revenue"
+    },
+    "metric_id": "company.cost_of_revenue",
+    "original_label": "Cost of revenue",
+    "value": 20458,
+    "original_value": "20,458",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:10q:gross-profit:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-10q-fy2027-q1"],
+      "transformation": "ixbrl fact extraction",
+      "parser_version": "xmllint-html-xpath-v1"
+    },
+    "document_id": "document:sec-10q-fy2027-q1",
+    "locator": {
+      "table": "Condensed Consolidated Statements of Income",
+      "row": "Gross profit",
+      "xbrl_fact_id": "f-34"
+    },
+    "metric_id": "company.gross_profit",
+    "original_label": "Gross profit",
+    "value": 61157,
+    "original_value": "61,157",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:release:gross-profit:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-1-fy2027-q1-release"],
+      "transformation": "html table extraction",
+      "parser_version": "stdlib-html-table-v1"
+    },
+    "document_id": "document:sec-ex99-1-fy2027-q1-release",
+    "locator": {
+      "table": "NVIDIA Corporation Condensed Consolidated Statements of Income",
+      "row": "Gross profit"
+    },
+    "metric_id": "company.gross_profit",
+    "original_label": "Gross profit",
+    "value": 61157,
+    "original_value": "61,157",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:10q:operating-expenses:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-10q-fy2027-q1"],
+      "transformation": "ixbrl fact extraction",
+      "parser_version": "xmllint-html-xpath-v1"
+    },
+    "document_id": "document:sec-10q-fy2027-q1",
+    "locator": {
+      "table": "Condensed Consolidated Statements of Income",
+      "row": "Total operating expenses",
+      "xbrl_fact_id": "f-40"
+    },
+    "metric_id": "company.operating_expenses",
+    "original_label": "Total operating expenses",
+    "value": 7621,
+    "original_value": "7,621",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:release:operating-expenses:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-1-fy2027-q1-release"],
+      "transformation": "html table extraction",
+      "parser_version": "stdlib-html-table-v1"
+    },
+    "document_id": "document:sec-ex99-1-fy2027-q1-release",
+    "locator": {
+      "table": "Q1 Fiscal 2027 Summary — GAAP",
+      "row": "Operating expenses"
+    },
+    "metric_id": "company.operating_expenses",
+    "original_label": "Operating expenses",
+    "value": 7621,
+    "original_value": "$7,621",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:10q:operating-income:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-10q-fy2027-q1"],
+      "transformation": "ixbrl fact extraction",
+      "parser_version": "xmllint-html-xpath-v1"
+    },
+    "document_id": "document:sec-10q-fy2027-q1",
+    "locator": {
+      "table": "Condensed Consolidated Statements of Income",
+      "row": "Operating income",
+      "xbrl_fact_id": "f-42"
+    },
+    "metric_id": "company.operating_income",
+    "original_label": "Operating income",
+    "value": 53536,
+    "original_value": "53,536",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:release:operating-income:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-1-fy2027-q1-release"],
+      "transformation": "html table extraction",
+      "parser_version": "stdlib-html-table-v1"
+    },
+    "document_id": "document:sec-ex99-1-fy2027-q1-release",
+    "locator": {
+      "table": "Q1 Fiscal 2027 Summary — GAAP",
+      "row": "Operating income"
+    },
+    "metric_id": "company.operating_income",
+    "original_label": "Operating income",
+    "value": 53536,
+    "original_value": "$53,536",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:10q:net-income:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-10q-fy2027-q1"],
+      "transformation": "ixbrl fact extraction",
+      "parser_version": "xmllint-html-xpath-v1"
+    },
+    "document_id": "document:sec-10q-fy2027-q1",
+    "locator": {
+      "table": "Condensed Consolidated Statements of Income",
+      "row": "Net income",
+      "xbrl_fact_id": "f-56"
+    },
+    "metric_id": "company.net_income",
+    "original_label": "Net income",
+    "value": 58321,
+    "original_value": "58,321",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:release:net-income:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-1-fy2027-q1-release"],
+      "transformation": "html table extraction",
+      "parser_version": "stdlib-html-table-v1"
+    },
+    "document_id": "document:sec-ex99-1-fy2027-q1-release",
+    "locator": {
+      "table": "Q1 Fiscal 2027 Summary — GAAP",
+      "row": "Net income"
+    },
+    "metric_id": "company.net_income",
+    "original_label": "Net income",
+    "value": 58321,
+    "original_value": "$58,321",
+    "unit": "USD_million",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:10q:diluted-eps:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-10q-fy2027-q1"],
+      "transformation": "ixbrl fact extraction",
+      "parser_version": "xmllint-html-xpath-v1"
+    },
+    "document_id": "document:sec-10q-fy2027-q1",
+    "locator": {
+      "table": "Condensed Consolidated Statements of Income",
+      "row": "Diluted net income per share",
+      "xbrl_fact_id": "f-60"
+    },
+    "metric_id": "company.earnings_per_share_diluted",
+    "original_label": "Diluted net income per share",
+    "value": 2.39,
+    "original_value": "2.39",
+    "unit": "USD_per_share",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  },
+  {
+    "id": "fact:release:diluted-eps:fy2027-q1",
+    "record_type": "fact",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:34:58+08:00",
+    "created_by": { "type": "agent", "id": "codex-fact-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-1-fy2027-q1-release"],
+      "transformation": "html table extraction",
+      "parser_version": "stdlib-html-table-v1"
+    },
+    "document_id": "document:sec-ex99-1-fy2027-q1-release",
+    "locator": {
+      "table": "Q1 Fiscal 2027 Summary — GAAP",
+      "row": "Diluted earnings per share"
+    },
+    "metric_id": "company.earnings_per_share_diluted",
+    "original_label": "Diluted earnings per share",
+    "value": 2.39,
+    "original_value": "$2.39",
+    "unit": "USD_per_share",
+    "currency": "USD",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "start": "2026-01-26",
+      "end": "2026-04-26"
+    },
+    "basis": "GAAP"
+  }
+]
