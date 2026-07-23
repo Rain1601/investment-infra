@@ -12,6 +12,7 @@ The manifest tracks each planned source as:
 
 - `planned`;
 - `verified_available`;
+- `captured_rendered`;
 - `captured`;
 - `blocked`;
 - `excluded`;
@@ -42,6 +43,6 @@ reviews/            Cross-checks, conflicts, and analyst decisions
 
 ## Current state
 
-`cycle_frozen`: FY2027 Q1 is the fixed research cycle and primary documents have been discovered. No source artifact has been captured or extracted yet.
+`primary_sources_captured_rendered`: FY2027 Q1 is fixed and four SEC documents have browser-rendered DOM snapshots with checksums. These are not byte-identical raw HTTP responses. No financial records have been extracted yet.
 
 `records/seed.example.json` is synthetic and exists only to verify schema relationships.

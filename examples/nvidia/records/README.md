@@ -6,7 +6,7 @@ Planned dataset files:
 
 ```text
 sources.json           Present: verified source identities
-documents.json
+documents.json         Present: four SEC rendered-snapshot records
 facts.json
 claims.json
 estimates.json

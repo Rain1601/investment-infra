@@ -7,6 +7,7 @@
   "status_definitions": {
     "planned": "Required by the workflow but not yet located.",
     "verified_available": "The official location and document identity were checked.",
+    "captured_rendered": "A browser-normalized DOM snapshot and checksum are stored; this is not the raw HTTP response body.",
     "captured": "The original artifact, checksum, and capture metadata are stored.",
     "blocked": "Access, licensing, or another explicit dependency prevents capture.",
     "excluded": "Reviewed and intentionally outside the research-cycle boundary.",
@@ -24,7 +25,8 @@
       "accession_number": "0001045810-26-000052",
       "published_on": "2026-05-20",
       "period_end": "2026-04-26",
-      "status": "verified_available",
+      "status": "captured_rendered",
+      "document_id": "document:sec-10q-fy2027-q1",
       "capture_priority": "P0",
       "authority_role": "Canonical source for reported financials, disclosures, and risk factors.",
       "capture_required": true
@@ -40,7 +42,8 @@
       "accession_number": "0001045810-26-000051",
       "published_on": "2026-05-20",
       "period_end": "2026-04-26",
-      "status": "verified_available",
+      "status": "captured_rendered",
+      "document_id": "document:sec-8k-fy2027-q1-results",
       "capture_priority": "P0",
       "authority_role": "Regulatory container linking the earnings release and CFO commentary.",
       "capture_required": true
@@ -55,7 +58,8 @@
       "parent_inventory_id": "inventory:sec-8k-fy2027-q1-results",
       "published_on": "2026-05-20",
       "period_end": "2026-04-26",
-      "status": "verified_available",
+      "status": "captured_rendered",
+      "document_id": "document:sec-ex99-1-fy2027-q1-release",
       "capture_priority": "P0",
       "authority_role": "Filed company release for reported results, highlights, and formal outlook.",
       "capture_required": true
@@ -70,7 +74,8 @@
       "parent_inventory_id": "inventory:sec-8k-fy2027-q1-results",
       "published_on": "2026-05-20",
       "period_end": "2026-04-26",
-      "status": "verified_available",
+      "status": "captured_rendered",
+      "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
       "capture_priority": "P0",
       "authority_role": "Primary management commentary for segment drivers, outlook, and definitions.",
       "capture_required": true
