@@ -1,0 +1,36 @@
+{
+  "example_id": "nvidia",
+  "dataset_version": "0.1.0",
+  "status": "bootstrap",
+  "entity": {
+    "entity_id": "company:nvidia",
+    "legal_name": "NVIDIA Corporation",
+    "ticker": "NVDA",
+    "exchange": "NASDAQ",
+    "cik": "0001045810"
+  },
+  "research_cycle": {
+    "selection_rule": "latest completed earnings cycle at the time collection begins",
+    "fiscal_period": null,
+    "earnings_date": null,
+    "frozen_at": null
+  },
+  "coverage": {
+    "required_source_groups": [
+      "regulatory_filings",
+      "company_ir",
+      "earnings_call",
+      "pre_earnings_expectations",
+      "industry_context",
+      "internal_research"
+    ],
+    "collected_documents": 0,
+    "known_gaps": [
+      "Research cycle has not been frozen.",
+      "No source artifacts have been collected.",
+      "Licensed provider availability has not been assessed."
+    ]
+  },
+  "schema": "../../schemas/v0.1/investment-record.schema.json",
+  "notes": "This manifest records coverage and scope. It does not contain an investment view."
+}

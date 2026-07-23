@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Raw licensed or large research materials stay outside Git.
+examples/*/raw/files/
