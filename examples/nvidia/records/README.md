@@ -8,9 +8,9 @@ Planned dataset files:
 sources.json           Present: verified source identities
 documents.json         Present: four SEC rendered-snapshot records
 facts.json             Present: 14 source-specific GAAP fact records
-claims.json
-estimates.json
-evidence.json
+claims.json            Present: five normalized management claims
+estimates.json         Present: five Q2 FY2027 management estimates
+evidence.json          Present: one assumption-to-estimate link
 conflicts.json
 theses.json
 ```

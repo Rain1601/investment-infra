@@ -225,6 +225,7 @@
               "enum": [
                 "reported",
                 "management_forecast",
+                "assumption",
                 "interpretation",
                 "causal",
                 "industry_view"

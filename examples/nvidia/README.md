@@ -43,6 +43,6 @@ reviews/            Cross-checks, conflicts, and analyst decisions
 
 ## Current state
 
-`first_facts_cross_checked`: FY2027 Q1 is fixed, four SEC documents have checksummed rendered snapshots, and seven GAAP metrics have been extracted from both the 10-Q and earnings release. The exact-value cross-check passed, but source independence remains low because both documents originate from NVIDIA.
+`management_outlook_structured`: the primary data package now separates reported Facts, management Claims, formal Estimates, and an explicit assumption-to-estimate evidence link. Source independence remains low because the current records are all NVIDIA-originated disclosures.
 
 `records/seed.example.json` is synthetic and exists only to verify schema relationships.

@@ -1,0 +1,175 @@
+[
+  {
+    "id": "estimate:management:q2-fy2027-revenue",
+    "record_type": "estimate",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-outlook-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management outlook extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Outlook",
+      "row": "Revenue"
+    },
+    "metric_id": "company.revenue",
+    "value": 91000,
+    "unit": "USD_million",
+    "currency": "USD",
+    "forecast_period": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    },
+    "as_of": "2026-05-20T16:21:19-04:00",
+    "provider": "NVIDIA management",
+    "estimate_type": "management_guidance",
+    "tolerance": {
+      "value": 2,
+      "unit": "percent_of_estimate"
+    },
+    "assumptions": [
+      "No Data Center compute revenue from China."
+    ]
+  },
+  {
+    "id": "estimate:management:q2-fy2027-gaap-gross-margin",
+    "record_type": "estimate",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-outlook-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management outlook extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Outlook",
+      "row": "GAAP gross margin"
+    },
+    "metric_id": "company.gross_margin",
+    "value": 74.9,
+    "unit": "percent",
+    "forecast_period": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    },
+    "as_of": "2026-05-20T16:21:19-04:00",
+    "provider": "NVIDIA management",
+    "estimate_type": "management_guidance",
+    "basis": "GAAP",
+    "tolerance": {
+      "value": 0.5,
+      "unit": "percentage_point"
+    },
+    "assumptions": []
+  },
+  {
+    "id": "estimate:management:q2-fy2027-non-gaap-gross-margin",
+    "record_type": "estimate",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-outlook-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management outlook extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Outlook",
+      "row": "Non-GAAP gross margin"
+    },
+    "metric_id": "company.gross_margin",
+    "value": 75.0,
+    "unit": "percent",
+    "forecast_period": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    },
+    "as_of": "2026-05-20T16:21:19-04:00",
+    "provider": "NVIDIA management",
+    "estimate_type": "management_guidance",
+    "basis": "non-GAAP",
+    "tolerance": {
+      "value": 0.5,
+      "unit": "percentage_point"
+    },
+    "assumptions": []
+  },
+  {
+    "id": "estimate:management:q2-fy2027-gaap-operating-expenses",
+    "record_type": "estimate",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-outlook-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management outlook extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Outlook",
+      "row": "GAAP operating expenses"
+    },
+    "metric_id": "company.operating_expenses",
+    "value": 8500,
+    "unit": "USD_million",
+    "currency": "USD",
+    "forecast_period": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    },
+    "as_of": "2026-05-20T16:21:19-04:00",
+    "provider": "NVIDIA management",
+    "estimate_type": "management_guidance",
+    "basis": "GAAP",
+    "approximate": true,
+    "assumptions": []
+  },
+  {
+    "id": "estimate:management:q2-fy2027-non-gaap-operating-expenses",
+    "record_type": "estimate",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-outlook-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management outlook extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Outlook",
+      "row": "Non-GAAP operating expenses"
+    },
+    "metric_id": "company.operating_expenses",
+    "value": 8300,
+    "unit": "USD_million",
+    "currency": "USD",
+    "forecast_period": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    },
+    "as_of": "2026-05-20T16:21:19-04:00",
+    "provider": "NVIDIA management",
+    "estimate_type": "management_guidance",
+    "basis": "non-GAAP",
+    "approximate": true,
+    "assumptions": []
+  }
+]

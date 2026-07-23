@@ -1,0 +1,17 @@
+[
+  {
+    "id": "evidence:q2-fy2027-china-assumption-qualifies-revenue-guidance",
+    "record_type": "evidence",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-outlook-linker" },
+    "review_status": "machine_checked",
+    "source_record_id": "claim:management:q2-fy2027-zero-china-compute-assumption",
+    "target_record_id": "estimate:management:q2-fy2027-revenue",
+    "relation": "qualifies",
+    "relevance": "direct",
+    "strength": "high",
+    "rationale": "The revenue guidance explicitly excludes Data Center compute revenue from China, so the assumption is required to interpret the estimate."
+  }
+]

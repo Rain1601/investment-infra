@@ -16,3 +16,4 @@ A review must refer to stable record IDs. Corrections create a new record or sup
 Current review artifacts:
 
 - `gaap-income-statement-cross-check.json`: exact-value comparison of seven GAAP metrics between the Q1 FY2027 10-Q and filed earnings release. It explicitly records that both sources originate from NVIDIA and therefore have low source independence.
+- `management-outlook-normalization.json`: separates management Claims, Estimates, and assumptions from the CFO Commentary and records the open range-estimate schema gap.
