@@ -1,0 +1,35 @@
+{
+  "name": "investment-infra-web",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "sync:data": "node scripts/sync-data.mjs",
+    "predev": "pnpm sync:data",
+    "dev": "next dev",
+    "prebuild": "pnpm sync:data",
+    "build": "next build --webpack",
+    "start": "next start",
+    "test": "node --test tests/data-integrity.test.mjs",
+    "lint": "eslint . --ignore-pattern .next"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@10.17.1",
+  "type": "module"
+}

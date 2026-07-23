@@ -6,3 +6,6 @@ __pycache__/
 
 # Raw licensed or large research materials stay outside Git.
 examples/*/raw/files/
+
+# Generated web data is rebuilt from the canonical example records.
+web/generated/nvidia.json
