@@ -26,7 +26,9 @@ source discovery
   → analyst review
 ```
 
-This repository currently contains design artifacts and example scaffolding only. It intentionally does not include a production ingestion pipeline or investment recommendations.
+This repository currently contains design artifacts, a source-anchored NVIDIA
+example, and a web evidence trace. It intentionally does not include a
+production ingestion pipeline or investment recommendations.
 
 ## Repository layout
 
@@ -34,6 +36,7 @@ This repository currently contains design artifacts and example scaffolding only
 docs/design/               Design decisions and the Phase 1 workflow
 schemas/v0.1/              Versioned JSON Schema for investment records
 examples/nvidia/           NVIDIA coverage manifest and dataset skeleton
+web/                       Vercel-ready NVIDIA data lineage interface
 ```
 
 Start with:
@@ -42,6 +45,7 @@ Start with:
 - [Core data model](docs/design/data-model.md)
 - [Verification workflow](docs/design/verification-workflow.md)
 - [NVIDIA example](examples/nvidia/README.md)
+- [Evidence trace web app](web/README.md)
 
 ## Current boundary
 
