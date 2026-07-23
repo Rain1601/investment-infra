@@ -1,0 +1,49 @@
+{
+  "review_id": "review:management-outlook-normalization:fy2027-q1",
+  "review_type": "claim_estimate_separation",
+  "entity_id": "company:nvidia",
+  "created_at": "2026-07-23T15:43:28+08:00",
+  "created_by": { "type": "agent", "id": "codex-outlook-reviewer" },
+  "review_status": "machine_checked",
+  "source_document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+  "source_independence": {
+    "level": "none",
+    "reason": "The review structures a single management disclosure and does not independently verify the forecasts."
+  },
+  "classification": {
+    "point_or_tolerance_estimates": [
+      "estimate:management:q2-fy2027-revenue",
+      "estimate:management:q2-fy2027-gaap-gross-margin",
+      "estimate:management:q2-fy2027-non-gaap-gross-margin",
+      "estimate:management:q2-fy2027-gaap-operating-expenses",
+      "estimate:management:q2-fy2027-non-gaap-operating-expenses"
+    ],
+    "management_claims": [
+      "claim:management:q2-fy2027-zero-china-compute-assumption",
+      "claim:management:q2-fy2027-dso-normalization",
+      "claim:management:q2-fy2027-cash-taxes-increase",
+      "claim:management:supply-capacity-beyond-several-quarters",
+      "claim:management:fy2027-tax-rate-range"
+    ],
+    "evidence_links": [
+      "evidence:q2-fy2027-china-assumption-qualifies-revenue-guidance"
+    ]
+  },
+  "schema_gaps": [
+    {
+      "gap_id": "schema-gap:estimate-range",
+      "status": "open",
+      "problem": "Estimate v0.1 requires a single numeric value and cannot faithfully represent management guidance expressed only as a range.",
+      "example_record_id": "claim:management:fy2027-tax-rate-range",
+      "decision": "Preserve the tax-rate guidance as a Claim with a structured range. Do not invent a 17% midpoint estimate.",
+      "candidate_change": "A future schema version should support point, bounded range, and point-with-tolerance estimate shapes."
+    }
+  ],
+  "summary": {
+    "estimates": 5,
+    "claims": 5,
+    "evidence_links": 1,
+    "open_schema_gaps": 1,
+    "conclusion": "The outlook is source-anchored and structurally separated, but not independently verified."
+  }
+}

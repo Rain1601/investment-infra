@@ -1,0 +1,114 @@
+[
+  {
+    "id": "document:sec-10q-fy2027-q1",
+    "record_type": "document",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T14:31:51+08:00",
+    "created_by": { "type": "pipeline", "id": "codex-browser-dom-capture" },
+    "review_status": "machine_checked",
+    "source_id": "source:sec-edgar",
+    "document_type": "10-Q",
+    "title": "NVIDIA Corporation Form 10-Q for the quarter ended April 26, 2026",
+    "published_at": "2026-05-20T16:35:52-04:00",
+    "captured_at": "2026-07-23T14:31:51+08:00",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "end": "2026-04-26"
+    },
+    "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+    "storage_uri": "../raw/public/sec-10q-fy2027-q1.dom.html",
+    "checksum": "sha256:76c0c11b449d4dc622964934767f80faf1f53b4bccd952410ecbab2bf1e9b5d0",
+    "media_type": "text/html",
+    "version_label": "browser-rendered DOM snapshot 1",
+    "capture_method": "browser_dom_snapshot",
+    "content_equivalence": "rendered_dom_not_raw_http_bytes"
+  },
+  {
+    "id": "document:sec-8k-fy2027-q1-results",
+    "record_type": "document",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T14:31:51+08:00",
+    "created_by": { "type": "pipeline", "id": "codex-browser-dom-capture" },
+    "review_status": "machine_checked",
+    "source_id": "source:sec-edgar",
+    "document_type": "8-K",
+    "title": "NVIDIA Corporation Form 8-K reporting Q1 FY2027 results",
+    "published_at": "2026-05-20T16:21:19-04:00",
+    "captured_at": "2026-07-23T14:31:51+08:00",
+    "period": {
+      "label": "2026-05-20",
+      "type": "instant",
+      "end": "2026-05-20"
+    },
+    "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/nvda-20260520.htm",
+    "storage_uri": "../raw/public/sec-8k-fy2027-q1-results.dom.html",
+    "checksum": "sha256:2a3d503f0a73e210df6a8df0e50b60aa9b8ce24334f7466faf8fbb7e7cf615e5",
+    "media_type": "text/html",
+    "version_label": "browser-rendered DOM snapshot 1",
+    "capture_method": "browser_dom_snapshot",
+    "content_equivalence": "rendered_dom_not_raw_http_bytes"
+  },
+  {
+    "id": "document:sec-ex99-1-fy2027-q1-release",
+    "record_type": "document",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T14:31:51+08:00",
+    "created_by": { "type": "pipeline", "id": "codex-browser-dom-capture" },
+    "review_status": "machine_checked",
+    "source_id": "source:sec-edgar",
+    "document_type": "8-K_EX-99.1",
+    "title": "NVIDIA Q1 FY2027 earnings release",
+    "published_at": "2026-05-20T16:21:19-04:00",
+    "captured_at": "2026-07-23T14:31:51+08:00",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "end": "2026-04-26"
+    },
+    "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+    "storage_uri": "../raw/public/sec-ex99-1-fy2027-q1-release.dom.html",
+    "checksum": "sha256:3b61774ed3a110c16fa6290d18a14243dd0b10cbb3c9b9b9683bb0a6f1e80bc0",
+    "media_type": "text/html",
+    "version_label": "browser-rendered DOM snapshot 1",
+    "capture_method": "browser_dom_snapshot",
+    "content_equivalence": "rendered_dom_not_raw_http_bytes",
+    "lineage": {
+      "input_ids": ["document:sec-8k-fy2027-q1-results"],
+      "transformation": "filed exhibit relationship"
+    }
+  },
+  {
+    "id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "record_type": "document",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T14:31:51+08:00",
+    "created_by": { "type": "pipeline", "id": "codex-browser-dom-capture" },
+    "review_status": "machine_checked",
+    "source_id": "source:sec-edgar",
+    "document_type": "8-K_EX-99.2",
+    "title": "NVIDIA CFO commentary on Q1 FY2027 results",
+    "published_at": "2026-05-20T16:21:19-04:00",
+    "captured_at": "2026-07-23T14:31:51+08:00",
+    "period": {
+      "label": "FY2027_Q1",
+      "type": "fiscal_quarter",
+      "end": "2026-04-26"
+    },
+    "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27cfocommentary.htm",
+    "storage_uri": "../raw/public/sec-ex99-2-fy2027-q1-cfo-commentary.dom.html",
+    "checksum": "sha256:53680ab4c6a1a4bba35eb5a4935f92e60e6c292b65d26c41de11ec56870b685d",
+    "media_type": "text/html",
+    "version_label": "browser-rendered DOM snapshot 1",
+    "capture_method": "browser_dom_snapshot",
+    "content_equivalence": "rendered_dom_not_raw_http_bytes",
+    "lineage": {
+      "input_ids": ["document:sec-8k-fy2027-q1-results"],
+      "transformation": "filed exhibit relationship"
+    }
+  }
+]

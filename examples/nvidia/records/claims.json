@@ -1,0 +1,142 @@
+[
+  {
+    "id": "claim:management:q2-fy2027-zero-china-compute-assumption",
+    "record_type": "claim",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-claim-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management claim extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Outlook",
+      "row": "Revenue"
+    },
+    "statement": "Q2 FY2027 revenue guidance assumes no Data Center compute revenue from China.",
+    "claim_type": "assumption",
+    "asserted_by": "Colette Kress, NVIDIA EVP and CFO",
+    "time_horizon": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    }
+  },
+  {
+    "id": "claim:management:q2-fy2027-dso-normalization",
+    "record_type": "claim",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-claim-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management claim extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Balance Sheet and Cash Flow",
+      "row": "Accounts receivable and DSO"
+    },
+    "statement": "Days sales outstanding are expected to return to a more normal level in Q2 FY2027.",
+    "claim_type": "management_forecast",
+    "asserted_by": "Colette Kress, NVIDIA EVP and CFO",
+    "time_horizon": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    }
+  },
+  {
+    "id": "claim:management:q2-fy2027-cash-taxes-increase",
+    "record_type": "claim",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-claim-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management claim extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Balance Sheet and Cash Flow",
+      "row": "Cash flow from operating activities"
+    },
+    "statement": "Cash taxes are expected to increase substantially in Q2 FY2027 because of estimated federal and state payments.",
+    "claim_type": "management_forecast",
+    "asserted_by": "Colette Kress, NVIDIA EVP and CFO",
+    "time_horizon": {
+      "label": "FY2027_Q2",
+      "type": "forecast_horizon"
+    }
+  },
+  {
+    "id": "claim:management:supply-capacity-beyond-several-quarters",
+    "record_type": "claim",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-claim-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management claim extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Balance Sheet and Cash Flow",
+      "row": "Inventory and supply-related commitments"
+    },
+    "statement": "Secured inventory and capacity are intended to support demand beyond the next several quarters.",
+    "claim_type": "management_forecast",
+    "asserted_by": "Colette Kress, NVIDIA EVP and CFO",
+    "time_horizon": {
+      "label": "Beyond the next several quarters",
+      "type": "forecast_horizon"
+    }
+  },
+  {
+    "id": "claim:management:fy2027-tax-rate-range",
+    "record_type": "claim",
+    "schema_version": "0.1",
+    "entity_id": "company:nvidia",
+    "created_at": "2026-07-23T15:43:28+08:00",
+    "created_by": { "type": "agent", "id": "codex-claim-extractor" },
+    "review_status": "machine_checked",
+    "lineage": {
+      "input_ids": ["document:sec-ex99-2-fy2027-q1-cfo-commentary"],
+      "transformation": "management claim extraction",
+      "parser_version": "section-aware-html-v1"
+    },
+    "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+    "locator": {
+      "section": "Outlook",
+      "row": "Full-year tax rates"
+    },
+    "statement": "FY2027 GAAP and non-GAAP tax rates are expected to remain within 16%–18%, excluding discrete items and material tax-environment changes.",
+    "claim_type": "management_forecast",
+    "asserted_by": "Colette Kress, NVIDIA EVP and CFO",
+    "time_horizon": {
+      "label": "FY2027",
+      "type": "forecast_horizon"
+    },
+    "structured_range": {
+      "lower": 16,
+      "upper": 18,
+      "unit": "percent",
+      "applies_to": ["GAAP", "non-GAAP"]
+    },
+    "conditions": [
+      "Excludes discrete items.",
+      "Excludes material changes to the tax environment."
+    ]
+  }
+]

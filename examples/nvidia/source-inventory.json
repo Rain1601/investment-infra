@@ -1,0 +1,150 @@
+{
+  "inventory_version": "0.1.0",
+  "entity_id": "company:nvidia",
+  "research_cycle": "FY2027_Q1",
+  "period_end": "2026-04-26",
+  "verified_at": "2026-07-23T14:26:04+08:00",
+  "status_definitions": {
+    "planned": "Required by the workflow but not yet located.",
+    "verified_available": "The official location and document identity were checked.",
+    "captured_rendered": "A browser-normalized DOM snapshot and checksum are stored; this is not the raw HTTP response body.",
+    "captured": "The original artifact, checksum, and capture metadata are stored.",
+    "blocked": "Access, licensing, or another explicit dependency prevents capture.",
+    "excluded": "Reviewed and intentionally outside the research-cycle boundary.",
+    "superseded": "A newer captured version exists; the earlier version is retained."
+  },
+  "documents": [
+    {
+      "inventory_id": "inventory:sec-10q-fy2027-q1",
+      "source_id": "source:sec-edgar",
+      "source_group": "regulatory_filings",
+      "document_type": "10-Q",
+      "title": "NVIDIA Corporation Form 10-Q for the quarter ended April 26, 2026",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+      "filing_index_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/0001045810-26-000052-index.htm",
+      "accession_number": "0001045810-26-000052",
+      "published_on": "2026-05-20",
+      "period_end": "2026-04-26",
+      "status": "captured_rendered",
+      "document_id": "document:sec-10q-fy2027-q1",
+      "capture_priority": "P0",
+      "authority_role": "Canonical source for reported financials, disclosures, and risk factors.",
+      "capture_required": true
+    },
+    {
+      "inventory_id": "inventory:sec-8k-fy2027-q1-results",
+      "source_id": "source:sec-edgar",
+      "source_group": "regulatory_filings",
+      "document_type": "8-K",
+      "title": "NVIDIA Corporation Form 8-K reporting Q1 FY2027 results",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/nvda-20260520.htm",
+      "filing_index_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/0001045810-26-000051-index.htm",
+      "accession_number": "0001045810-26-000051",
+      "published_on": "2026-05-20",
+      "period_end": "2026-04-26",
+      "status": "captured_rendered",
+      "document_id": "document:sec-8k-fy2027-q1-results",
+      "capture_priority": "P0",
+      "authority_role": "Regulatory container linking the earnings release and CFO commentary.",
+      "capture_required": true
+    },
+    {
+      "inventory_id": "inventory:sec-ex991-fy2027-q1-release",
+      "source_id": "source:sec-edgar",
+      "source_group": "company_ir",
+      "document_type": "8-K_EX-99.1",
+      "title": "NVIDIA Q1 FY2027 earnings release",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+      "parent_inventory_id": "inventory:sec-8k-fy2027-q1-results",
+      "published_on": "2026-05-20",
+      "period_end": "2026-04-26",
+      "status": "captured_rendered",
+      "document_id": "document:sec-ex99-1-fy2027-q1-release",
+      "capture_priority": "P0",
+      "authority_role": "Filed company release for reported results, highlights, and formal outlook.",
+      "capture_required": true
+    },
+    {
+      "inventory_id": "inventory:sec-ex992-fy2027-q1-cfo-commentary",
+      "source_id": "source:sec-edgar",
+      "source_group": "company_ir",
+      "document_type": "8-K_EX-99.2",
+      "title": "NVIDIA CFO commentary on Q1 FY2027 results",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27cfocommentary.htm",
+      "parent_inventory_id": "inventory:sec-8k-fy2027-q1-results",
+      "published_on": "2026-05-20",
+      "period_end": "2026-04-26",
+      "status": "captured_rendered",
+      "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+      "capture_priority": "P0",
+      "authority_role": "Primary management commentary for segment drivers, outlook, and definitions.",
+      "capture_required": true
+    },
+    {
+      "inventory_id": "inventory:nvidia-ir-fy2027-q1-release",
+      "source_id": "source:nvidia-ir",
+      "source_group": "company_ir",
+      "document_type": "earnings_release_web",
+      "title": "NVIDIA Announces Financial Results for First Quarter Fiscal 2027",
+      "original_uri": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx",
+      "published_on": "2026-05-20",
+      "period_end": "2026-04-26",
+      "status": "verified_available",
+      "capture_priority": "P1",
+      "authority_role": "Official IR publication and cross-check mirror of filed Exhibit 99.1.",
+      "equivalent_inventory_id": "inventory:sec-ex991-fy2027-q1-release",
+      "capture_required": true
+    },
+    {
+      "inventory_id": "inventory:nvidia-ir-fy2027-q1-webcast",
+      "source_id": "source:nvidia-ir",
+      "source_group": "earnings_call",
+      "document_type": "earnings_call_webcast",
+      "title": "NVIDIA 1st Quarter FY27 Financial Results webcast",
+      "original_uri": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/NVIDIA-1st-Quarter-FY27-Financial-Results/default.aspx",
+      "published_on": "2026-05-20",
+      "period_end": "2026-04-26",
+      "status": "verified_available",
+      "capture_priority": "P0",
+      "authority_role": "Official management remarks and analyst Q&A recording.",
+      "capture_required": true,
+      "notes": "The event page links to a third-party webcast player. No official text transcript has been identified."
+    },
+    {
+      "inventory_id": "inventory:nvidia-ir-fy2027-q1-call-announcement",
+      "source_id": "source:nvidia-ir",
+      "source_group": "earnings_call",
+      "document_type": "conference_call_announcement",
+      "title": "NVIDIA Sets Conference Call for First-Quarter Financial Results",
+      "original_uri": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-First-Quarter-Financial-Results/default.aspx",
+      "published_on": "2026-04-29",
+      "period_end": "2026-04-26",
+      "status": "verified_available",
+      "capture_priority": "P2",
+      "authority_role": "Confirms fiscal-period end, call timing, and planned CFO commentary.",
+      "capture_required": false
+    }
+  ],
+  "gaps": [
+    {
+      "source_group": "pre_earnings_expectations",
+      "status": "blocked",
+      "reason": "No timestamped licensed consensus or internal estimate source has been connected."
+    },
+    {
+      "source_group": "earnings_call",
+      "status": "planned",
+      "reason": "An official text transcript has not been identified; use of a third-party transcript requires source and license review."
+    },
+    {
+      "source_group": "industry_context",
+      "status": "planned",
+      "reason": "Industry evidence will be selected only after the first verification questions and thesis are defined."
+    },
+    {
+      "source_group": "internal_research",
+      "status": "planned",
+      "reason": "No internal model, prior thesis, or analyst note has been supplied."
+    }
+  ]
+}

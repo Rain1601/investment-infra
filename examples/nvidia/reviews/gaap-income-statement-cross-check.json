@@ -1,0 +1,119 @@
+{
+  "review_id": "review:gaap-income-statement-cross-check:fy2027-q1",
+  "review_type": "exact_value_cross_check",
+  "entity_id": "company:nvidia",
+  "period": {
+    "label": "FY2027_Q1",
+    "start": "2026-01-26",
+    "end": "2026-04-26"
+  },
+  "basis": "GAAP",
+  "created_at": "2026-07-23T15:34:58+08:00",
+  "created_by": { "type": "agent", "id": "codex-cross-checker" },
+  "review_status": "machine_checked",
+  "source_documents": [
+    "document:sec-10q-fy2027-q1",
+    "document:sec-ex99-1-fy2027-q1-release"
+  ],
+  "source_independence": {
+    "level": "low",
+    "reason": "Both documents are NVIDIA-originated disclosures filed through SEC EDGAR. Agreement confirms internal disclosure consistency, not independent verification of the underlying economic facts."
+  },
+  "comparison_rules": {
+    "required_dimensions": [
+      "entity_id",
+      "metric_id",
+      "period",
+      "basis",
+      "unit",
+      "currency"
+    ],
+    "numeric_rule": "exact normalized-value equality",
+    "result_on_mismatch": "create conflict record; do not select a preferred value automatically"
+  },
+  "checks": [
+    {
+      "metric_id": "company.revenue",
+      "fact_ids": [
+        "fact:10q:revenue:fy2027-q1",
+        "fact:release:revenue:fy2027-q1"
+      ],
+      "normalized_value": 81615,
+      "unit": "USD_million",
+      "difference": 0,
+      "result": "match"
+    },
+    {
+      "metric_id": "company.cost_of_revenue",
+      "fact_ids": [
+        "fact:10q:cost-of-revenue:fy2027-q1",
+        "fact:release:cost-of-revenue:fy2027-q1"
+      ],
+      "normalized_value": 20458,
+      "unit": "USD_million",
+      "difference": 0,
+      "result": "match"
+    },
+    {
+      "metric_id": "company.gross_profit",
+      "fact_ids": [
+        "fact:10q:gross-profit:fy2027-q1",
+        "fact:release:gross-profit:fy2027-q1"
+      ],
+      "normalized_value": 61157,
+      "unit": "USD_million",
+      "difference": 0,
+      "result": "match"
+    },
+    {
+      "metric_id": "company.operating_expenses",
+      "fact_ids": [
+        "fact:10q:operating-expenses:fy2027-q1",
+        "fact:release:operating-expenses:fy2027-q1"
+      ],
+      "normalized_value": 7621,
+      "unit": "USD_million",
+      "difference": 0,
+      "result": "match"
+    },
+    {
+      "metric_id": "company.operating_income",
+      "fact_ids": [
+        "fact:10q:operating-income:fy2027-q1",
+        "fact:release:operating-income:fy2027-q1"
+      ],
+      "normalized_value": 53536,
+      "unit": "USD_million",
+      "difference": 0,
+      "result": "match"
+    },
+    {
+      "metric_id": "company.net_income",
+      "fact_ids": [
+        "fact:10q:net-income:fy2027-q1",
+        "fact:release:net-income:fy2027-q1"
+      ],
+      "normalized_value": 58321,
+      "unit": "USD_million",
+      "difference": 0,
+      "result": "match"
+    },
+    {
+      "metric_id": "company.earnings_per_share_diluted",
+      "fact_ids": [
+        "fact:10q:diluted-eps:fy2027-q1",
+        "fact:release:diluted-eps:fy2027-q1"
+      ],
+      "normalized_value": 2.39,
+      "unit": "USD_per_share",
+      "difference": 0,
+      "result": "match"
+    }
+  ],
+  "summary": {
+    "checked_metrics": 7,
+    "matches": 7,
+    "material_conflicts": 0,
+    "conclusion": "The selected GAAP metrics are internally consistent across the 10-Q and earnings release."
+  }
+}

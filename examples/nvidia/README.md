@@ -11,7 +11,9 @@ Can an agent assemble and maintain a reviewable evidence package for one NVIDIA 
 The manifest tracks each planned source as:
 
 - `planned`;
-- `collected`;
+- `verified_available`;
+- `captured_rendered`;
+- `captured`;
 - `blocked`;
 - `excluded`;
 - `superseded`.
@@ -41,6 +43,6 @@ reviews/            Cross-checks, conflicts, and analyst decisions
 
 ## Current state
 
-`bootstrap`: the scope, schema, and directories exist; no research corpus has been collected yet.
+`management_outlook_structured`: the primary data package now separates reported Facts, management Claims, formal Estimates, and an explicit assumption-to-estimate evidence link. Source independence remains low because the current records are all NVIDIA-originated disclosures.
 
 `records/seed.example.json` is synthetic and exists only to verify schema relationships.

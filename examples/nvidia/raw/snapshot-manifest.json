@@ -1,0 +1,46 @@
+{
+  "manifest_version": "0.1.0",
+  "entity_id": "company:nvidia",
+  "research_cycle": "FY2027_Q1",
+  "captured_at": "2026-07-23T14:31:51+08:00",
+  "capture_method": "browser_dom_snapshot",
+  "content_equivalence": "rendered_dom_not_raw_http_bytes",
+  "sanitization": [
+    "Removed the Codex browser sidebar root from the serialized DOM."
+  ],
+  "limitations": [
+    "Browser parsing may normalize markup, element order, character encoding, or omitted non-rendered content.",
+    "Checksums identify the committed snapshots and must not be represented as hashes of SEC raw HTTP payloads.",
+    "External stylesheets, images, scripts, and linked XBRL files are not bundled."
+  ],
+  "snapshots": [
+    {
+      "document_id": "document:sec-10q-fy2027-q1",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm",
+      "storage_uri": "raw/public/sec-10q-fy2027-q1.dom.html",
+      "bytes": 200060,
+      "checksum": "sha256:76c0c11b449d4dc622964934767f80faf1f53b4bccd952410ecbab2bf1e9b5d0"
+    },
+    {
+      "document_id": "document:sec-8k-fy2027-q1-results",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/nvda-20260520.htm",
+      "storage_uri": "raw/public/sec-8k-fy2027-q1-results.dom.html",
+      "bytes": 26784,
+      "checksum": "sha256:2a3d503f0a73e210df6a8df0e50b60aa9b8ce24334f7466faf8fbb7e7cf615e5"
+    },
+    {
+      "document_id": "document:sec-ex99-1-fy2027-q1-release",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+      "storage_uri": "raw/public/sec-ex99-1-fy2027-q1-release.dom.html",
+      "bytes": 200183,
+      "checksum": "sha256:3b61774ed3a110c16fa6290d18a14243dd0b10cbb3c9b9b9683bb0a6f1e80bc0"
+    },
+    {
+      "document_id": "document:sec-ex99-2-fy2027-q1-cfo-commentary",
+      "original_uri": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27cfocommentary.htm",
+      "storage_uri": "raw/public/sec-ex99-2-fy2027-q1-cfo-commentary.dom.html",
+      "bytes": 165370,
+      "checksum": "sha256:53680ab4c6a1a4bba35eb5a4935f92e60e6c292b65d26c41de11ec56870b685d"
+    }
+  ]
+}
