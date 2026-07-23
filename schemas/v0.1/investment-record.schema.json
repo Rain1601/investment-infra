@@ -1,0 +1,371 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://investment-infra.dev/schemas/v0.1/investment-record.schema.json",
+  "title": "Investment Infra record collection",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      { "$ref": "#/$defs/source" },
+      { "$ref": "#/$defs/document" },
+      { "$ref": "#/$defs/fact" },
+      { "$ref": "#/$defs/claim" },
+      { "$ref": "#/$defs/estimate" },
+      { "$ref": "#/$defs/evidence" },
+      { "$ref": "#/$defs/conflict" },
+      { "$ref": "#/$defs/thesis" }
+    ]
+  },
+  "$defs": {
+    "base": {
+      "type": "object",
+      "required": [
+        "id",
+        "record_type",
+        "schema_version",
+        "created_at",
+        "created_by",
+        "review_status"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 3 },
+        "record_type": {
+          "enum": [
+            "source",
+            "document",
+            "fact",
+            "claim",
+            "estimate",
+            "evidence",
+            "conflict",
+            "thesis"
+          ]
+        },
+        "schema_version": { "const": "0.1" },
+        "entity_id": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "created_by": {
+          "type": "object",
+          "required": ["type", "id"],
+          "properties": {
+            "type": { "enum": ["human", "agent", "pipeline"] },
+            "id": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "review_status": {
+          "enum": [
+            "draft",
+            "machine_checked",
+            "analyst_approved",
+            "disputed",
+            "rejected",
+            "superseded"
+          ]
+        },
+        "lineage": {
+          "type": "object",
+          "properties": {
+            "input_ids": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "transformation": { "type": "string" },
+            "code_version": { "type": "string" },
+            "model": { "type": "string" },
+            "prompt_version": { "type": "string" },
+            "parser_version": { "type": "string" }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "locator": {
+      "type": "object",
+      "minProperties": 1,
+      "properties": {
+        "page": { "type": "integer", "minimum": 1 },
+        "section": { "type": "string" },
+        "table": { "type": "string" },
+        "row": { "type": "string" },
+        "speaker_turn": { "type": "integer", "minimum": 0 },
+        "quote": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "period": {
+      "type": "object",
+      "required": ["label", "type"],
+      "properties": {
+        "label": { "type": "string" },
+        "type": {
+          "enum": [
+            "instant",
+            "fiscal_quarter",
+            "fiscal_year",
+            "calendar_period",
+            "forecast_horizon"
+          ]
+        },
+        "start": { "type": "string", "format": "date" },
+        "end": { "type": "string", "format": "date" }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": ["name", "source_type"],
+          "properties": {
+            "record_type": { "const": "source" },
+            "name": { "type": "string" },
+            "source_type": {
+              "enum": [
+                "regulator",
+                "company",
+                "exchange",
+                "data_provider",
+                "research_provider",
+                "news",
+                "industry",
+                "expert",
+                "internal"
+              ]
+            },
+            "access_method": { "type": "string" },
+            "license_scope": { "type": "string" },
+            "authority_notes": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "document": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": [
+            "source_id",
+            "document_type",
+            "title",
+            "published_at",
+            "captured_at",
+            "original_uri",
+            "checksum"
+          ],
+          "properties": {
+            "record_type": { "const": "document" },
+            "source_id": { "type": "string" },
+            "document_type": { "type": "string" },
+            "title": { "type": "string" },
+            "published_at": { "type": "string", "format": "date-time" },
+            "as_of": { "type": "string", "format": "date-time" },
+            "captured_at": { "type": "string", "format": "date-time" },
+            "period": { "$ref": "#/$defs/period" },
+            "original_uri": { "type": "string", "format": "uri" },
+            "storage_uri": { "type": "string" },
+            "checksum": { "type": "string", "pattern": "^sha256:[a-fA-F0-9]{64}$" },
+            "media_type": { "type": "string" },
+            "version_label": { "type": "string" },
+            "supersedes_id": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "fact": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": [
+            "document_id",
+            "locator",
+            "metric_id",
+            "original_label",
+            "value",
+            "unit",
+            "period",
+            "basis"
+          ],
+          "properties": {
+            "record_type": { "const": "fact" },
+            "document_id": { "type": "string" },
+            "locator": { "$ref": "#/$defs/locator" },
+            "metric_id": { "type": "string" },
+            "original_label": { "type": "string" },
+            "value": {},
+            "original_value": {},
+            "unit": { "type": "string" },
+            "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+            "period": { "$ref": "#/$defs/period" },
+            "basis": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "claim": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": [
+            "document_id",
+            "locator",
+            "statement",
+            "claim_type",
+            "asserted_by"
+          ],
+          "properties": {
+            "record_type": { "const": "claim" },
+            "document_id": { "type": "string" },
+            "locator": { "$ref": "#/$defs/locator" },
+            "statement": { "type": "string" },
+            "claim_type": {
+              "enum": [
+                "reported",
+                "management_forecast",
+                "interpretation",
+                "causal",
+                "industry_view"
+              ]
+            },
+            "asserted_by": { "type": "string" },
+            "time_horizon": { "$ref": "#/$defs/period" }
+          }
+        }
+      ]
+    },
+    "estimate": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": [
+            "document_id",
+            "metric_id",
+            "value",
+            "unit",
+            "forecast_period",
+            "as_of",
+            "provider",
+            "assumptions"
+          ],
+          "properties": {
+            "record_type": { "const": "estimate" },
+            "document_id": { "type": "string" },
+            "locator": { "$ref": "#/$defs/locator" },
+            "metric_id": { "type": "string" },
+            "value": { "type": "number" },
+            "unit": { "type": "string" },
+            "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+            "forecast_period": { "$ref": "#/$defs/period" },
+            "as_of": { "type": "string", "format": "date-time" },
+            "provider": { "type": "string" },
+            "sample_size": { "type": "integer", "minimum": 1 },
+            "assumptions": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      ]
+    },
+    "evidence": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": [
+            "source_record_id",
+            "target_record_id",
+            "relation",
+            "rationale"
+          ],
+          "properties": {
+            "record_type": { "const": "evidence" },
+            "source_record_id": { "type": "string" },
+            "target_record_id": { "type": "string" },
+            "relation": {
+              "enum": [
+                "supports",
+                "contradicts",
+                "qualifies",
+                "updates",
+                "supersedes"
+              ]
+            },
+            "relevance": { "enum": ["direct", "indirect"] },
+            "strength": { "enum": ["low", "medium", "high"] },
+            "rationale": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "conflict": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": [
+            "member_ids",
+            "conflict_type",
+            "status",
+            "summary"
+          ],
+          "properties": {
+            "record_type": { "const": "conflict" },
+            "member_ids": {
+              "type": "array",
+              "minItems": 2,
+              "uniqueItems": true,
+              "items": { "type": "string" }
+            },
+            "conflict_type": {
+              "enum": [
+                "value",
+                "definition",
+                "period",
+                "basis",
+                "version",
+                "forecast",
+                "interpretation"
+              ]
+            },
+            "status": {
+              "enum": ["open", "partially_resolved", "resolved", "not_comparable"]
+            },
+            "summary": { "type": "string" },
+            "resolution": { "type": "string" },
+            "preferred_record_id": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "thesis": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": [
+            "statement",
+            "position",
+            "falsification_condition",
+            "status"
+          ],
+          "properties": {
+            "record_type": { "const": "thesis" },
+            "statement": { "type": "string" },
+            "position": { "enum": ["long", "short", "watch"] },
+            "falsification_condition": { "type": "string" },
+            "status": {
+              "enum": ["proposed", "active", "strengthened", "weakened", "falsified", "retired"]
+            },
+            "conviction": { "enum": ["low", "medium", "high"] },
+            "review_due_at": { "type": "string", "format": "date-time" }
+          }
+        }
+      ]
+    }
+  }
+}
