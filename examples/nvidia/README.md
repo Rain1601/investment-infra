@@ -11,7 +11,8 @@ Can an agent assemble and maintain a reviewable evidence package for one NVIDIA 
 The manifest tracks each planned source as:
 
 - `planned`;
-- `collected`;
+- `verified_available`;
+- `captured`;
 - `blocked`;
 - `excluded`;
 - `superseded`.
@@ -41,6 +42,6 @@ reviews/            Cross-checks, conflicts, and analyst decisions
 
 ## Current state
 
-`bootstrap`: the scope, schema, and directories exist; no research corpus has been collected yet.
+`cycle_frozen`: FY2027 Q1 is the fixed research cycle and primary documents have been discovered. No source artifact has been captured or extracted yet.
 
 `records/seed.example.json` is synthetic and exists only to verify schema relationships.

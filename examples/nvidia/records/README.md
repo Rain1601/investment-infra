@@ -5,7 +5,7 @@ Records in this directory conform to `schemas/v0.1/investment-record.schema.json
 Planned dataset files:
 
 ```text
-sources.json
+sources.json           Present: verified source identities
 documents.json
 facts.json
 claims.json

@@ -1,7 +1,7 @@
 {
   "example_id": "nvidia",
   "dataset_version": "0.1.0",
-  "status": "bootstrap",
+  "status": "cycle_frozen",
   "entity": {
     "entity_id": "company:nvidia",
     "legal_name": "NVIDIA Corporation",
@@ -10,10 +10,15 @@
     "cik": "0001045810"
   },
   "research_cycle": {
-    "selection_rule": "latest completed earnings cycle at the time collection begins",
-    "fiscal_period": null,
-    "earnings_date": null,
-    "frozen_at": null
+    "selection_rule": "latest completed earnings cycle at the time collection began",
+    "fiscal_period": "FY2027_Q1",
+    "period_end": "2026-04-26",
+    "earnings_date": "2026-05-20",
+    "frozen_at": "2026-07-23T14:26:04+08:00",
+    "selection_basis": [
+      "NVIDIA Investor Relations Q1 FY2027 results announcement",
+      "SEC Form 10-Q accession 0001045810-26-000052"
+    ]
   },
   "coverage": {
     "required_source_groups": [
@@ -24,13 +29,17 @@
       "industry_context",
       "internal_research"
     ],
+    "discovered_documents": 7,
     "collected_documents": 0,
     "known_gaps": [
-      "Research cycle has not been frozen.",
-      "No source artifacts have been collected.",
-      "Licensed provider availability has not been assessed."
+      "No discovered source artifact has been captured and hashed.",
+      "No official text transcript of the earnings call has been identified; the official webcast is available.",
+      "Pre-earnings consensus requires a timestamped licensed or internal source.",
+      "Industry-context sources have not yet been selected.",
+      "No internal model or prior thesis has been provided."
     ]
   },
   "schema": "../../schemas/v0.1/investment-record.schema.json",
+  "source_inventory": "source-inventory.json",
   "notes": "This manifest records coverage and scope. It does not contain an investment view."
 }
